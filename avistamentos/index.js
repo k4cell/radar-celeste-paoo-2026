@@ -19,5 +19,10 @@ app.put('/avistamentos', (req, res) => {
   res.status(201).json(avistamentos[contador])
 })
 
+app.post('/eventos', (req, res) => {
+  console.log(req.body.tipo)
+  res.status(200).json({ msg: 'ok' })
+})
+
 const port = 4000
 app.listen(port, () => console.log(`Avistamentos. Porta ${port}`))
